@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: guestbook
-          image: gcr.io/google-samples/guestbook:v3
+          image: kljagadish/guestbook:latest
           env:
             - name: ENV
               value: "dev"
