@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image: kljagadish/guestbook:latest  # Replace with your Docker Hub repo/image
+        image: docker.io/kljagadish/guestbook:df5ae76
         ports:
         - containerPort: 3000
 ---
