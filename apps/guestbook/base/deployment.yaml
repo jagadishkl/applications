@@ -2,11 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: guestbook
-  namespace: platform-demo
-  labels:
-    app: guestbook
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: guestbook
@@ -16,24 +13,7 @@ spec:
         app: guestbook
     spec:
       containers:
-      - name: guestbook
-        image: docker.io/kljagadish/guestbook:df5ae76
-        ports:
-        - containerPort: 3000
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: guestbook
-  namespace: platform-demo
-spec:
-  selector:
-    app: guestbook
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
-  type: LoadBalancer  # Or ClusterIP/NodePort based on your environment
-
-
-
+        - name: guestbook
+          image: docker.io/kljagadish/guestbook:df5ae76
+          ports:
+            - containerPort: 3000
