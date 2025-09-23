@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: guestbook
-          image: kljagadish/guestbook:v3
+          image: kljagadish/guestbook:latest
           ports:
             - containerPort: 3000
 
