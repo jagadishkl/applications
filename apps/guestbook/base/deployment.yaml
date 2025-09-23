@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: guestbook
-          image: docker.io/kljagadish/guestbook:df5ae76
+          image: docker.io/kljagadish/guestbook:2746448
           ports:
             - containerPort: 3000
