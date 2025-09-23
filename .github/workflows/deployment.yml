@@ -35,7 +35,7 @@ jobs:
 
       - name: Update Kubernetes manifests with new image tag
         run: |
-          sed -i "s|image:.*guestbook:.*|image: docker.io/kljagadish/guestbook:$GIT_SHA|g" ./k8s/deployment.yaml
+          sed -i "s|image:.*guestbook:.*|image: docker.io/kljagadish/guestbook:$GIT_SHA|g" ./apps/guestbook/base/deployment.yaml
 
       - name: Commit updated manifests
         run: |
