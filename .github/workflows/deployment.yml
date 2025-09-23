@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - main
-
+      
 env:
-  REGISTRY: docker.io
-  IMAGE_NAME: kljagadish/guestbook
+  REGISTRY: docker.io/kljagadish
+  IMAGE_NAME: guestbook
+  GIT_SHA: ${{ github.sha }}
 
 jobs:
   build-and-push:
