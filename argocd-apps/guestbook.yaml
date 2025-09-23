@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-org/applications.git'
+    repoURL: 'https://github.com/jagadishkl/applications.git'
     targetRevision: HEAD
     path: apps/guestbook/base
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: 'https://192.168.56.20:6443'
     namespace: guestbook
   syncPolicy:
     automated:
